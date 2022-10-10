@@ -7,6 +7,7 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "2.3.1",
+    "cross-env": "^7.0.3",
     "prop-types": "15.8.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -44,7 +45,7 @@
     "webpack-dev-server": "4.9.3"
   },
   "scripts": {
-    "build": "BABEL_ENV=production webpack --node-env=prod",
-    "start": "BABEL_ENV=development webpack serve --node-env=dev"
+    "build": "cross-env BABEL_ENV=production webpack --node-env=prod",
+    "start": "cross-env BABEL_ENV=development webpack serve --node-env=dev"
   }
 }
