@@ -1,26 +1,40 @@
-import { createArray } from '../../helpers';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import Bar from '../bar';
 
 import styles from './styles';
 
 const WIDTH_MULTIPLIER = window.screen.width;
-const ARRAY = createArray(30);
-const BAR_WIDTH = WIDTH_MULTIPLIER / ARRAY.length;
 
-const Array = () => (
-  <div className={ styles.array }>
-    {
-      ARRAY.map((height, index) => (
-          <Bar
-            key={ index }
-            width={ BAR_WIDTH }
-            height={ height }
-          />
+const resetArray = () => ({ type: 'CONTROLS/RESET_ARRAY' });
+
+const Array = () => {
+  const array = useSelector(({ arraySettings }) => arraySettings.array);
+
+  const dispatch = useDispatch();
+  const createArray = () => dispatch(resetArray());
+
+  useEffect(() => {
+    createArray()
+  }, []);
+
+  const barWidth = WIDTH_MULTIPLIER / array.length || 0;
+
+  return (
+    <div className={ styles.array }>
+      {
+        array.map((height, index) => (
+            <Bar
+              key={ index }
+              width={ barWidth }
+              height={ height }
+            />
+          )
         )
-      )
-    }
-  </div>
-);
+      }
+    </div>
+  );
+}
 
 export default Array;
