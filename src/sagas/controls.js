@@ -8,6 +8,6 @@ function* resetArray() {
   );
 
   yield put({ type: "ARRAY/SET_ARRAY", value: createArray(arrayLength) });
-}
+};
 
 export default [takeLatest("CONTROLS/RESET_ARRAY", resetArray)];
