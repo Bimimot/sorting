@@ -10,4 +10,12 @@ function* resetArray() {
   yield put({ type: "ARRAY/SET_ARRAY", value: createArray(arrayLength) });
 };
 
-export default [takeLatest("CONTROLS/RESET_ARRAY", resetArray)];
+function* setArrayLength({ value }) {
+  yield put({ type: 'ARRAY/SET_LENGTH', value })
+  yield resetArray();
+}
+
+export default [
+  takeLatest('CONTROLS/RESET_ARRAY', resetArray),
+  takeLatest('CONTROLS/SET_ARRAY_LENGTH', setArrayLength)
+];

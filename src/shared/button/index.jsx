@@ -1,5 +1,4 @@
 import classnames from 'classnames/bind';
-
 import styles from './styles';
 
 const cn = classnames.bind(styles);
