@@ -6,7 +6,7 @@ function* resetArray() {
   const arrayLength = yield select(
     ({ arraySettings }) => arraySettings.arrayLength
   );
-
+  yield put({ type: "COMPARISON/RESET"});
   yield put({ type: "ARRAY/SET_ARRAY", value: createArray(arrayLength) });
 };
 
