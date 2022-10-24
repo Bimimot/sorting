@@ -22,7 +22,7 @@ const LengthInput = () => {
   return (
     <RangeInput
       value={arrayLength}
-      title="Длина массива"
+      title="ARRAY LENGTH"
       min={15}
       max={180}
       disabled={inProgress}

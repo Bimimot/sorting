@@ -11,7 +11,7 @@ const ResetButton = () => {
 
   return (
     <Button
-      text="Пересоздать массив"
+      text="RESET ARRAY"
       disabled={ false }
       onClick={ onClick }
     />

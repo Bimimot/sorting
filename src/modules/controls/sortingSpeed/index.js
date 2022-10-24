@@ -17,7 +17,7 @@ const SortingSpeed = () => {
   return (
     <RangeInput
       value={sortingSpeed}
-      title="Скорость сортировки"
+      title="SORTING SPEED"
       min={1}
       max={20}
       onValueChange={onChangeSpeed}
