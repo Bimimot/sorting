@@ -6,7 +6,11 @@ import {
   takeLatest
 } from 'redux-saga/effects';
 
-import { startSorting, setNewParams, setPause } from "./sorting";
+import {
+    startSorting,
+    setNewParams,
+    setPause
+} from "./sorting";
 
 const SPEED_MULTIPLIER = 60;
 
