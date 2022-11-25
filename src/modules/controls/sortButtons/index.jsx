@@ -16,6 +16,11 @@ const SortButtons = () => {
         text="MERGE SORTING"
         onClick={() => dispatch({ type: "SORTING/MERGE_SORT" })}
       />
+
+      <Button
+        text="SHAKE SORTING"
+        onClick={() => dispatch({ type: "SORTING/SHAKER_SORT" })}
+      />
     </div>
   );
 };
