@@ -25,7 +25,7 @@ function* mergeSortHelper() {
   const mainArray = array.slice();
   const auxiliaryArray = array.slice();
 
-  // race wich can stop the sorting
+  // race can stop the sorting
   const { success } = yield race({
     success: mergeSort(mainArray, auxiliaryArray, 0, array.length - 1),
     canceled: take('COMPARISON/RESET')
