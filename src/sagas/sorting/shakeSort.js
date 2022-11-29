@@ -33,7 +33,7 @@ function* shakerSortHelper() {
   }
 }
 
-// analyze elements
+// swap helper
 function* swap(array, i, j) {
   const params = {
     [i]: array[j],
