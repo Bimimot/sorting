@@ -21,6 +21,11 @@ const SortButtons = () => {
         text="SHAKE SORTING"
         onClick={() => dispatch({ type: "SORTING/SHAKER_SORT" })}
       />
+
+      <Button
+        text="QUICK SORTING"
+        onClick={() => dispatch({ type: "SORTING/QUICK_SORT" })}
+      />
     </div>
   );
 };
